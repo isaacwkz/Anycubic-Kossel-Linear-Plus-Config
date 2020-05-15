@@ -38,9 +38,9 @@ Once the above set of blocking code has finished executing, one of the cariages 
 
 Insert the following set of code to execute a blocking downwards move.
 ```
-current_position.z = (delta_height -5); //add a relative z movement to the planner queue
-line_to_current_position(homing_feedrate(Z_AXIS)); //excute queued movement
-planner.synchronize(); //waits for queue movements to finish executing
+current_position.z = (delta_height -5); //commands a downwards z movement
+line_to_current_position(homing_feedrate(Z_AXIS)); //executes queued movement
+planner.synchronize(); //waits for queued movements to finish executing
 ```
 The above set of code commands the cariages to move 5mm downwards, which is enough to trigger sensorless homing (on my machine hehe)
 
