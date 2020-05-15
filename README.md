@@ -1,6 +1,6 @@
 # Anycubic Kossel Linear Plus Marlin 2.0 Config
 
-## Hardware config:
+## Hardware config
 - BigTreeTech SKR Pro
 - TMC2209 with sensorless homing
 > Motors are powered from 24V while extruder and bed heaters are at 12V
@@ -9,7 +9,8 @@
 
 ## Sensorless homing
 - Homing current can be reduced to increase sensitivity when homing.
-### Motor grinding when homing
+
+## Motor grinding when homing
 Delta homing procedure happens in 2 stages:
   1. Fast move to bring end effctor up until one of the three carriage is at Z-min
   2. Individually home each of the three carriages.
@@ -18,7 +19,7 @@ This movement causes the first carriage that has already reach the top in the fi
 
 The motor grinds as sensorless homing does not work reliably when motor is not moving (since carriage is already at z-min)
 
-### Fix
+## Fix
 - Move all carriages down after the first pass to provide space for sensorless homing to trigger reliably.
 
 Delta homing procedure is found in `src\Module\Delta.cpp` `void home_delta()`
