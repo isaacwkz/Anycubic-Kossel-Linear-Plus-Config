@@ -2,7 +2,7 @@
 
 ## Hardware config:
 - BigTreeTech SKR Pro
-- TMC2209 w sensorless homing
+- TMC2209 with sensorless homing
 > Motors are powered from 24V while extruder and bed heaters are at 12V
 - Stock Z-sensor
 - Stock front panel
