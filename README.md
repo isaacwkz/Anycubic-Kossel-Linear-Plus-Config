@@ -18,7 +18,7 @@ This movement causes the first carriage that has already reach the top in the fi
 
 The motor grinds as sensorless homing does not work reliably when motor is not moving (since carriage is already at z-min)
 
-#### Fix
+### Fix
 - Move all carriages down after the first pass to provide space for sensorless homing to trigger reliably.
 
 Delta homing procedure is found in `src\Module\Delta.cpp` `void home_delta()`
